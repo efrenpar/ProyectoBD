@@ -17,7 +17,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#cambiarVentana" prefHeight="25.0" prefWidth="146.0" text="ventana Factura">
+            <Button mnemonicParsing="false" onAction="#cambiarVentana" prefHeight="25.0" prefWidth="146.0" text="Ventana Bodega">
                <HBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </HBox.margin>
