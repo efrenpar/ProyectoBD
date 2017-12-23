@@ -17,14 +17,14 @@ public class Persona {
     private StringProperty ruc;
     private StringProperty razonSocial;
     private StringProperty direccion;
-    private StringProperty contaco;
+    private StringProperty contacto;
     private StringProperty ciudad;
 
-    public Persona(String ruc, String razonSocial, String direccion, String contaco, String ciudad) {
+    public Persona(String ruc, String razonSocial, String direccion, String contacto, String ciudad) {
         this.ruc = new SimpleStringProperty(ruc);
         this.razonSocial = new SimpleStringProperty(razonSocial);
         this.direccion = new SimpleStringProperty (direccion);
-        this.contaco = new SimpleStringProperty (contaco);
+        this.contacto = new SimpleStringProperty (contacto);
         this.ciudad = new SimpleStringProperty(ciudad);
     }
     
@@ -56,14 +56,15 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public String getContaco() {
-        return contaco.get();
+    public String getContacto() {
+        return contacto.get();
     }
 
-    public void setContaco(StringProperty contaco) {
-        this.contaco = contaco;
+    public void setContacto(StringProperty contacto) {
+        this.contacto = contacto;
     }
 
+  
     public String getCiudad() {
         return ciudad.get();
     }

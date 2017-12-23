@@ -9,6 +9,7 @@ package mostrarbase;
 import java.net.URL;
 
 import com.mysql.jdbc.Connection;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,12 +21,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 /**
  *
@@ -38,9 +44,6 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Persona,SimpleStringProperty> ruc;
     
     @FXML
-    private TableColumn<Persona,SimpleStringProperty> contacto;
-    
-    @FXML
     private TableColumn<Persona,SimpleStringProperty> razonSocial;
     
     @FXML
@@ -50,7 +53,8 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Persona,SimpleStringProperty> ciudad;
     
     
-    
+    @FXML
+    private TableColumn<Persona,SimpleStringProperty> contactoColumn;
    
     
     @FXML
@@ -60,16 +64,21 @@ public class FXMLDocumentController implements Initializable {
         
     }
     @FXML
-    private void cambiarVentana(ActionEvent event){
+    private void cambiarVentana(ActionEvent event) throws IOException{
     
-        System.out.println("cambio de ventana");
+       ((Node) event.getSource()).getScene().getWindow().hide();
+       Parent parent = FXMLLoader.load(getClass().getResource("Bodega.fxml"));
+       Stage stage = new Stage();
+       Scene scene = new Scene(parent);
+       stage.setScene(scene);
+       stage.show();
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ruc.setCellValueFactory(new PropertyValueFactory<Persona,SimpleStringProperty>("ruc"));
         razonSocial.setCellValueFactory(new PropertyValueFactory<Persona,SimpleStringProperty>("razonSocial"));
-//        contacto.setCellValueFactory(new PropertyValueFactory<Persona,SimpleStringProperty>("contacto"));
+        contactoColumn.setCellValueFactory(new PropertyValueFactory<Persona,SimpleStringProperty>("contacto"));
         direccion.setCellValueFactory(new PropertyValueFactory<Persona,SimpleStringProperty>("direccion"));
         ciudad.setCellValueFactory(new PropertyValueFactory<Persona,SimpleStringProperty>("ciudad"));
         
@@ -94,7 +103,8 @@ public class FXMLDocumentController implements Initializable {
                  p.setRuc(new SimpleStringProperty(rs.getString(1)));
                  p.setRazonSocial(new SimpleStringProperty(rs.getString(2)));
                  p.setDireccion(new SimpleStringProperty(rs.getString(3)));
-                // p.setContaco(new SimpleStringProperty(rs.getString(4)));
+                 p.setContacto(new SimpleStringProperty(rs.getString(4)));
+                 System.out.println(rs.getString(4));
                  p.setCiudad(new SimpleStringProperty(rs.getString(5)));
                  personas.add(p);
             }
