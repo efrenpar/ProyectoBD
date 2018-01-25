@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-image: url(imagenes/fondo3.png);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zenficar.ContabilidadController">
+   <children>
+      <Button fx:id="btnback" layoutX="690.0" layoutY="14.0" mnemonicParsing="false" onAction="#Main_Menu" text="Menu Principal" />
+      <TabPane layoutY="65.0" prefHeight="385.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Abono">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="356.0" layoutY="14.0" text="ABONO">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="49.0" text="Factura No.-">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="166.0" layoutY="47.0" prefHeight="25.0" prefWidth="199.0" />
+                        <Button layoutX="392.0" layoutY="47.0" mnemonicParsing="false" />
+                        <Label layoutX="74.0" layoutY="226.0" text="Fecha:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView layoutX="50.0" layoutY="127.0" prefHeight="71.0" prefWidth="700.0" />
+                        <Label layoutX="74.0" layoutY="99.0" text="Datos de la Factura:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="166.0" layoutY="224.0" prefHeight="25.0" prefWidth="199.0" />
+                        <Label layoutX="74.0" layoutY="267.0" text="Valor a pagar:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="166.0" layoutY="265.0" prefHeight="25.0" prefWidth="199.0" />
+                        <Button layoutX="240.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Aceptar" />
+                        <Button layoutX="491.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Cancelar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Cuenta x Cobrar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="300.0" layoutY="14.0" text="CUENTAS POR COBRAR">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="97.0" layoutY="50.0" text="Busqueda por:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="209.0" layoutY="48.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Button layoutX="501.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Aceptar" />
+                        <Label layoutX="97.0" layoutY="92.0" text="Buscar:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="209.0" layoutY="90.0" prefHeight="25.0" prefWidth="277.0" />
+                        <Button layoutX="501.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Buscar" />
+                        <TableView layoutY="125.0" prefHeight="161.0" prefWidth="800.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Cuenta x Pagar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="300.0" layoutY="14.0" text="CUENTAS POR COBRAR">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="97.0" layoutY="50.0" text="Busqueda por:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="209.0" layoutY="48.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Button layoutX="501.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Aceptar" />
+                        <Label layoutX="97.0" layoutY="92.0" text="Buscar:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="209.0" layoutY="90.0" prefHeight="25.0" prefWidth="277.0" />
+                        <Button layoutX="501.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Buscar" />
+                        <TableView layoutY="125.0" prefHeight="156.0" prefWidth="800.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="293.0" layoutY="14.0" text="CUENTAS POR PAGAR">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="134.0" layoutY="56.0" text="Busqueda por:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="249.0" layoutY="53.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Button layoutX="558.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Aceptar" />
+                        <Label layoutX="134.0" layoutY="92.0" text="Buscar:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="249.0" layoutY="89.0" prefHeight="25.0" prefWidth="277.0" />
+                        <Button layoutX="558.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Buscar" />
+                        <TableView layoutY="127.0" prefHeight="161.0" prefWidth="800.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Rol de Pagos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="336.0" layoutY="14.0" text="ROL DE PAGOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="84.0" layoutY="50.0" text="Desde: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="400.0" layoutY="50.0" text="Hasta:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="140.0" layoutY="48.0" />
+                        <DatePicker layoutX="464.0" layoutY="48.0" />
+                        <Button layoutX="674.0" layoutY="48.0" mnemonicParsing="false" text="Generar" />
+                        <TableView layoutY="91.0" prefHeight="200.0" prefWidth="800.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Comisiones">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="344.0" layoutY="11.0" text="COMISIONES">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="85.0" text="Desde: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="407.0" layoutY="85.0" text="Hasta:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="474.0" layoutY="83.0" />
+                        <DatePicker layoutX="185.0" layoutY="83.0" />
+                        <Button layoutX="678.0" layoutY="82.0" mnemonicParsing="false" text="Generar" />
+                        <TableView layoutY="124.0" prefHeight="200.0" prefWidth="807.0" />
+                        <Label layoutX="78.0" layoutY="49.0" text="Cod. Vendedor:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="185.0" layoutY="47.0" prefHeight="25.0" prefWidth="173.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-image: url(imagenes/fondo3.png);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zenficar.PropiedadesController">
+   <children>
+      <TabPane layoutY="65.0" prefHeight="385.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Productos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="400.0" prefHeight="356.0" prefWidth="400.0" />
+                        <Label layoutX="150.0" layoutY="7.0" text="PRODUCTOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="44.0" prefHeight="17.0" prefWidth="65.0" text="Codigo: " />
+                        <Label layoutX="41.0" layoutY="75.0" prefHeight="17.0" prefWidth="65.0" text="Nombre:" />
+                        <Label layoutX="41.0" layoutY="107.0" prefHeight="17.0" prefWidth="65.0" text="Descripcion:" />
+                        <Label layoutX="41.0" layoutY="139.0" prefHeight="17.0" prefWidth="83.0" text="Precio Venta:" />
+                        <Label layoutX="39.0" layoutY="171.0" prefHeight="17.0" prefWidth="87.0" text="Precio Compra:" />
+                        <Label layoutX="41.0" layoutY="202.0" prefHeight="17.0" prefWidth="65.0" text="Cantidad:" />
+                        <Label layoutX="41.0" layoutY="235.0" prefHeight="17.0" prefWidth="65.0" text="Bodega:" />
+                        <Label layoutX="41.0" layoutY="267.0" prefHeight="17.0" prefWidth="65.0" text="Proveedor:" />
+                        <TextField layoutX="130.0" layoutY="40.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="71.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="103.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="135.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="167.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="198.0" prefHeight="25.0" prefWidth="215.0" />
+                        <ComboBox layoutX="130.0" layoutY="231.0" prefHeight="25.0" prefWidth="215.0" />
+                        <ComboBox layoutX="130.0" layoutY="263.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button layoutX="60.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button layoutX="165.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button layoutX="270.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Bodegas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="400.0" prefHeight="356.0" prefWidth="400.0" />
+                        <Label layoutX="150.0" layoutY="15.0" text="BODEGAS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="54.0" prefHeight="17.0" prefWidth="65.0" text="Codigo: " />
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="17.0" prefWidth="65.0" text="Nombre:" />
+                        <Label layoutX="51.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="Descripcion:" />
+                        <Label layoutX="50.0" layoutY="159.0" prefHeight="17.0" prefWidth="67.0" text="Ciudad:" />
+                        <TextField layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button layoutX="60.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button layoutX="165.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button layoutX="270.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Empleados">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="54.0" prefHeight="17.0" prefWidth="65.0" text="Cedula:" />
+                        <Label layoutX="22.0" layoutY="89.0" prefHeight="17.0" prefWidth="65.0" text="Nombre:" />
+                        <Label layoutX="22.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="Direccion:" />
+                        <Label layoutX="24.0" layoutY="159.0" prefHeight="17.0" prefWidth="83.0" text="Sueldo:" />
+                        <Label layoutX="22.0" layoutY="194.0" prefHeight="17.0" prefWidth="87.0" text="Cargo:" />
+                        <TextField layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="215.0" />
+                        <ComboBox layoutX="130.0" layoutY="190.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button layoutX="60.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button layoutX="165.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button layoutX="270.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                        <TableView layoutX="400.0" prefHeight="356.0" prefWidth="400.0" />
+                        <TextField layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Label layoutX="150.0" layoutY="15.0" text="EMPLEADOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Usuarios">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="226.0" layoutY="146.0" prefHeight="17.0" prefWidth="104.0" text="Repetir Password:" />
+                        <Label layoutX="226.0" layoutY="104.0" prefHeight="17.0" prefWidth="65.0" text="Password:" />
+                        <Label layoutX="226.0" layoutY="60.0" prefHeight="17.0" prefWidth="65.0" text="User:" />
+                        <TextField layoutX="340.0" layoutY="56.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button layoutX="317.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Guardar" />
+                        <Label layoutX="329.0" layoutY="14.0" text="USUARIOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField layoutX="340.0" layoutY="100.0" prefHeight="25.0" prefWidth="215.0" />
+                        <PasswordField layoutX="340.0" layoutY="142.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Label layoutX="226.0" layoutY="191.0" prefHeight="17.0" prefWidth="104.0" text="Perteneciente A:" />
+                        <ComboBox layoutX="340.0" layoutY="187.0" prefHeight="25.0" prefWidth="215.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Vendedor">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="400.0" prefHeight="356.0" prefWidth="400.0" />
+                        <TextField layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField layoutX="130.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+                        <ComboBox layoutX="130.0" layoutY="190.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button layoutX="60.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button layoutX="165.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button layoutX="270.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                        <TextField layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Label layoutX="150.0" layoutY="15.0" text="VENDEDORES">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="54.0" text="Codigo:" />
+                        <Label layoutX="60.0" layoutY="89.0" text="Nombre:" />
+                        <Label layoutX="60.0" layoutY="124.0" text="Direccion:" />
+                        <Label layoutX="60.0" layoutY="159.0" text="Ciudad:" />
+                        <Label layoutX="59.0" layoutY="194.0" text="Comision:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Pedidos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnback" layoutX="690.0" layoutY="14.0" mnemonicParsing="false" onAction="#Main_Menu" text="Menu Principal" />
+   </children>
+</AnchorPane>
