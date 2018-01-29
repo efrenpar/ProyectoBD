@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-image: url(imagenes/fondo3.png);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zenficar.PropiedadesController">
+   <children>
+      <TabPane layoutY="65.0" prefHeight="385.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Productos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbViewProductos" layoutX="400.0" onMouseClicked="#Gestionador_TableProductos" prefHeight="356.0" prefWidth="400.0" />
+                        <Label layoutX="150.0" layoutY="7.0" text="PRODUCTOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="44.0" prefHeight="17.0" prefWidth="65.0" text="Codigo: " />
+                        <Label layoutX="41.0" layoutY="74.0" prefHeight="17.0" prefWidth="65.0" text="Nombre:" />
+                        <Label layoutX="41.0" layoutY="104.0" prefHeight="17.0" prefWidth="65.0" text="Descripcion:" />
+                        <Label layoutX="41.0" layoutY="134.0" prefHeight="17.0" prefWidth="83.0" text="Precio Venta:" />
+                        <Label layoutX="39.0" layoutY="164.0" prefHeight="17.0" prefWidth="87.0" text="Precio Compra:" />
+                        <Label layoutX="41.0" layoutY="194.0" prefHeight="17.0" prefWidth="65.0" text="Cantidad:" />
+                        <Label layoutX="41.0" layoutY="224.0" prefHeight="17.0" prefWidth="65.0" text="Categoria" />
+                        <Label layoutX="41.0" layoutY="254.0" prefHeight="17.0" prefWidth="65.0" text="Proveedor:" />
+                        <TextField fx:id="pro_tf_codigo" layoutX="130.0" layoutY="40.0" prefHeight="25.0" prefWidth="230.0" />
+                        <TextField fx:id="pro_tf_nombre" layoutX="130.0" layoutY="70.0" prefHeight="25.0" prefWidth="230.0" />
+                        <TextField fx:id="pro_tf_desc" layoutX="130.0" layoutY="100.0" prefHeight="25.0" prefWidth="230.0" />
+                        <TextField fx:id="pro_tf_venta" layoutX="130.0" layoutY="130.0" prefHeight="25.0" prefWidth="230.0" />
+                        <TextField fx:id="pro_tf_compra" layoutX="130.0" layoutY="160.0" prefHeight="25.0" prefWidth="230.0" />
+                        <TextField fx:id="pro_tf_cantidad" layoutX="130.0" layoutY="190.0" prefHeight="25.0" prefWidth="75.0" />
+                        <ComboBox fx:id="cmbCategoria1" layoutX="130.0" layoutY="220.0" prefHeight="25.0" prefWidth="230.0" />
+                        <ComboBox fx:id="cmbProveedor1" layoutX="130.0" layoutY="250.0" prefHeight="25.0" prefWidth="230.0" />
+                        <Button fx:id="btnsave1" layoutX="60.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_save_Products" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button fx:id="btnactualizar1" disable="true" layoutX="165.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_actualizar_Productos" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button fx:id="btneliminar1" disable="true" layoutX="270.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_eliminar_Productos" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                        <ComboBox fx:id="cmbBodega1" layoutX="130.0" layoutY="280.0" prefHeight="25.0" prefWidth="230.0" />
+                        <Label layoutX="39.0" layoutY="284.0" prefHeight="17.0" prefWidth="65.0" text="Bodega:" />
+                        <Label layoutX="213.0" layoutY="194.0" prefHeight="17.0" prefWidth="52.0" text="Venta X:" />
+                        <ComboBox fx:id="cmbTipo1" layoutX="270.0" layoutY="190.0" prefHeight="25.0" prefWidth="90.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Categoria de Productos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="150.0" layoutY="7.0" text="CATEGORIAS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tbViewCategorias" layoutX="400.0" onMouseClicked="#Gestionador_TableCategoria" prefHeight="356.0" prefWidth="400.0" />
+                        <Button fx:id="btnsave2" layoutX="60.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_save_Categoria" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button fx:id="btnactualizar2" disable="true" layoutX="165.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_actualizar_Categoria" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button fx:id="btneliminar2" disable="true" layoutX="270.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_eliminar_Categoria" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                        <Label layoutX="28.0" layoutY="125.0" prefHeight="17.0" prefWidth="65.0" text="Categoria:" />
+                        <Label layoutX="28.0" layoutY="74.0" prefHeight="17.0" prefWidth="108.0" text="Codigo Categorico:" />
+                        <TextField fx:id="cat_tf_nombre" layoutX="140.0" layoutY="121.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="cat_tf_codigo" layoutX="140.0" layoutY="70.0" prefHeight="25.0" prefWidth="215.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Bodegas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbViewBodegas" layoutX="400.0" onMouseClicked="#Gestionador_Bodegas" prefHeight="356.0" prefWidth="400.0" />
+                        <Label layoutX="150.0" layoutY="15.0" text="BODEGAS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="54.0" prefHeight="17.0" prefWidth="65.0" text="Codigo: " />
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="17.0" prefWidth="65.0" text="Nombre:" />
+                        <Label layoutX="51.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="Descripcion:" />
+                        <Label layoutX="50.0" layoutY="159.0" prefHeight="17.0" prefWidth="67.0" text="Ciudad:" />
+                        <TextField fx:id="bod_tf_ciudad" layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="bod_tf_desc" layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="bod_tf_nombre" layoutX="130.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="bod_tf_codigo" layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button fx:id="btnsave3" layoutX="60.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_save_Bodegas" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button fx:id="btnactualizar3" disable="true" layoutX="165.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_actualizar_Bodega" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button fx:id="btneliminar3" disable="true" layoutX="270.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_eliminar_Bodega" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Empleados">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="54.0" prefHeight="17.0" prefWidth="65.0" text="Cedula:" />
+                        <Label layoutX="22.0" layoutY="89.0" prefHeight="17.0" prefWidth="65.0" text="Nombre:" />
+                        <Label layoutX="22.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="Direccion:" />
+                        <Label layoutX="24.0" layoutY="159.0" prefHeight="17.0" prefWidth="83.0" text="Sueldo:" />
+                        <Label layoutX="22.0" layoutY="194.0" prefHeight="17.0" prefWidth="87.0" text="Cargo:" />
+                        <TextField fx:id="emp_tf_dir" layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="emp_tf_nombre" layoutX="130.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="emp_tf_cedula" layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="215.0" />
+                        <ComboBox fx:id="cmbCargo" layoutX="130.0" layoutY="190.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button fx:id="btnsave4" layoutX="60.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_save_Empleados" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button fx:id="btnactualizar4" disable="true" layoutX="165.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_actualizar_Empleado" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button fx:id="btneliminar4" disable="true" layoutX="270.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_eliminar_Empleado" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                        <TableView fx:id="tbViewEmpleados" layoutX="400.0" onMouseClicked="#Gestionador_Empleados" prefHeight="356.0" prefWidth="400.0" />
+                        <TextField fx:id="emp_tf_sueldo" layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Label layoutX="150.0" layoutY="15.0" text="EMPLEADOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Usuarios">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="226.0" layoutY="146.0" prefHeight="17.0" prefWidth="104.0" text="Repetir Password:" />
+                        <Label layoutX="226.0" layoutY="104.0" prefHeight="17.0" prefWidth="65.0" text="Password:" />
+                        <Label layoutX="226.0" layoutY="60.0" prefHeight="17.0" prefWidth="65.0" text="User:" />
+                        <TextField fx:id="user_tf_user" layoutX="340.0" layoutY="56.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button fx:id="btnsave5" layoutX="291.0" layoutY="283.0" mnemonicParsing="false" onAction="#Boton_save_Usuarios" prefHeight="25.0" prefWidth="114.0" text="Guardar" />
+                        <Label layoutX="329.0" layoutY="14.0" text="USUARIOS">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="user_tf_pas" layoutX="340.0" layoutY="100.0" prefHeight="25.0" prefWidth="215.0" />
+                        <PasswordField fx:id="user_tf_pasconf" layoutX="340.0" layoutY="142.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Label layoutX="226.0" layoutY="191.0" prefHeight="17.0" prefWidth="104.0" text="Perteneciente A:" />
+                        <ComboBox fx:id="cmbPertenencia" layoutX="340.0" layoutY="187.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button fx:id="btnlimpiar5" layoutX="467.0" layoutY="283.0" mnemonicParsing="false" onAction="#Boton_limpiar_Usuarios" prefHeight="25.0" prefWidth="114.0" text="Limpiar" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Vendedor">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbViewVendedores" layoutX="400.0" onMouseClicked="#Gestionador_Vendedor" prefHeight="356.0" prefWidth="400.0" />
+                        <TextField fx:id="ven_tf_ciudad" layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="ven_tf_dir" layoutX="130.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" />
+                        <TextField fx:id="ven_tf_nombre" layoutX="130.0" layoutY="85.0" prefHeight="25.0" prefWidth="215.0" />
+                        <ComboBox fx:id="cmbComision" layoutX="130.0" layoutY="190.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Button fx:id="btnsave6" layoutX="60.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_save_Vendedor" prefHeight="25.0" prefWidth="80.0" text="Guardar" />
+                        <Button fx:id="btnactualizar6" disable="true" layoutX="165.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_actualizar_Vendedor" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+                        <Button fx:id="btneliminar6" disable="true" layoutX="270.0" layoutY="310.0" mnemonicParsing="false" onAction="#Boton_eliminar_Vendedor" prefHeight="25.0" prefWidth="80.0" text="Eliminar" />
+                        <TextField fx:id="ven_tf_codigo" layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="215.0" />
+                        <Label layoutX="150.0" layoutY="15.0" text="VENDEDORES">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="54.0" text="Codigo:" />
+                        <Label layoutX="60.0" layoutY="89.0" text="Nombre:" />
+                        <Label layoutX="60.0" layoutY="124.0" text="Direccion:" />
+                        <Label layoutX="60.0" layoutY="159.0" text="Ciudad:" />
+                        <Label layoutX="59.0" layoutY="194.0" text="Comision:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Pedidos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Ingreso a Bodega">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnback" layoutX="690.0" layoutY="14.0" mnemonicParsing="false" onAction="#Main_Menu" text="Menu Principal" />
+   </children>
+</AnchorPane>
